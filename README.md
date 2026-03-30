@@ -1,7 +1,7 @@
 # my-learning-journey
 Python Core Fundamentals
 # Python History
-Python was created by Guido Van Rossum born in 1956. Started programming project as a hobby in December 1989. He is a big fan of 'Monty Python's Flying Circus', sitcom series, so close Python as a working title for the project. In 1999, he defined four goals for Python 
+Python was created by Guido Van Rossum born in 1956. Started programming project as a hobby in December 1989. He is a big fan of 'Monty Python's Flying Circus', sitcom series, so chose Python as a working title for the project. In 1999, he defined four goals for Python 
 1. An EASY and INTUITIVE LANGUAGE as powerful as major competitors
 2. OPEN SOURCE, so anyone can contribute to it's development
 3. Code is UNDERSTANDABLE in plain English
