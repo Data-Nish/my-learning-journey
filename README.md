@@ -32,22 +32,34 @@ A variable should start with a letter or an underscore and cannot start with num
 1. Assigning Values - Two ways of assigning values to a variable:
 a. Assigning a Single Value
 name = 'Jen'
+
 salary = 20000
+
 print(name)
+
 print(salary)
 
 b. Multiple Assignment : Assigning multiple values:
+
    a=b=c=10
+   
    x,y,z=10,20,30
+   
    print(y)
+   
    print(z)
+   
    print(a)
+   
    20
+   
    30
+   
    10
 
 2. Getting User Input - To get input from user in python and then assign that value to a python variable, we need to user the 'INPUT' function
 To use the input function we also need to show a 'Prompt' to user to asking them to enter a value.
+
 name = input("Enter your name: ")
 
 # Python DataTypes
