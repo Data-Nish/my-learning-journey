@@ -6,6 +6,7 @@ Python was created by Guido Van Rossum born in 1956. Started programming project
 2. OPEN SOURCE, so anyone can contribute to it's development
 3. Code is UNDERSTANDABLE in plain English
 4. Suitable for everyday tasks
+   
 Python still occupies a high rank in the top ten of the PYPL PopularitY of Programming Language.
 
 # What is Python?
