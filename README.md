@@ -30,6 +30,7 @@ Variables are used to store and retrieve data from the memory. We can store valu
 A variable should start with a letter or an underscore and cannot start with numbers.
 
 1. Assigning Values - Two ways of assigning values to a variable:
+   
 a. Assigning a Single Value
 name = 'Jen'
 
