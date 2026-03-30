@@ -103,6 +103,7 @@ Three types of Conditional Statements
 syntax
 ------
 if true_or_not:
+
    do_this_if_true
 
 the 'if' keyword
@@ -116,7 +117,9 @@ If the true_or_not expression represents the truth (i.e., its value is not equal
 if the true_or_not expression does not represent the truth (i.e., its value is equal to zero), the indented statement(s) will be omitted (ignored), and the next executed instruction will be the one after the original indentation level.
 
 if the_weather_is_good:
+
     go_for_a_walk()
+
 have_lunch()
 
 having lunch is not a conditional activity and doesn't depend on the weather
@@ -127,8 +130,11 @@ CONDITIONALLY EXECUTED STATEMENTS HAVE TO BE INDENTED
    Syntax
    ------
 if true_or_false_condition:
+
     perform_if_condition_true
+
 else:
+
     perform_if_condition_false
 
 the 'else' keyword says what to do if the condition specified for the if is not met (note the colon after the word).
@@ -139,8 +145,11 @@ if the condition evaluates to True (its value is not equal to zero), the perform
 if the condition evaluates to False (it is equal to zero), the perform_if_condition_false statement is executed, and the conditional statement comes to an end.
 
 if the_weather_is_good:
+
     go_for_a_walk()
+
 else:
+
     go_to_a_theater()
 have_lunch()
 
@@ -150,14 +159,23 @@ Nested if-else Statements
 instruction placed after the if is another if
 
 if the_weather_is_good:
+
     if nice_restaurant_is_found:
+
         have_lunch()
+    
     else:
+    
         eat_a_sandwich()
+
 else:
+
     if tickets_are_available:
+       
         go_to_the_theater()
+    
     else:
+    
         go_shopping()
 
 Here are two important points:
@@ -170,16 +188,22 @@ indentation improves readability,
  it's a shorter form of else if. The elif keyword used when we have multiple conditions and want to check them one by one.
 
 if the_weather_is_good:
+
     go_for_a_walk()
+
 elif tickets_are_available:
+
     go_to_the_theater()
+
 elif table_is_available:
+
     go_for_lunch()
+
 else:
+
     play_chess_at_home()
 
-If the weather is fine, we'll go for a walk, otherwise if we get tickets, we'll go to the theater, otherwise if there are free tables at the restaurant, we'll go for lunch; if all else fails, we'll return home and play chess.
-The way to assemble subsequent if-elif-else statements is sometimes called a 'cascade'.
+If the weather is fine, we'll go for a walk, otherwise if we get tickets, we'll go to the theater, otherwise if there are free tables at the restaurant, we'll go for lunch; if all else fails, we'll return home and play chess. The way to assemble subsequent if-elif-else statements is sometimes called a 'cascade'.
 
 It mustn't use else without a preceding if;
 
