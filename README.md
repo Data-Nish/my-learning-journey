@@ -102,10 +102,10 @@ Three types of Conditional Statements
  
 3. If-elif
    
-1. If
 
-syntax
-------
+
+If syntax
+---------
 if true_or_not:
 
    do_this_if_true
