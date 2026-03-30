@@ -18,11 +18,12 @@ Easy to teach
 Easy to use
 Easy to understand
 Easy to obtain, install and deploy (https://www.python.org/downloads/)
+
 Interesting fact - Python Software Foundation (PSF), a community that aims to develop, improve, expand, abd popularize Python and it's environment
 
 # Drawbacks
-It's not a speed demon - doesn't deliver exceptional performance
-Debugging Python Code can be more difficult than other languages
+1. It's not a speed demon - doesn't deliver exceptional performance
+2. Debugging Python Code can be more difficult than other languages
 
 # Python Variables
 Variables are used to store and retrieve data from the memory. We can store value in a variable by either ASSIGNING a value to a variables or GETTING the value as INPUT from user.
