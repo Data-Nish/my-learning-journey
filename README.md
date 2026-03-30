@@ -96,8 +96,12 @@ Priority	   Operator
 
 Three types of Conditional Statements
 
-1. If   2. If-else   3. If-elif
+1. If
 
+2. If-else
+ 
+3. If-elif
+   
 1. If
 
 syntax
