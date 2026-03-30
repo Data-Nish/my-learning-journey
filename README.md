@@ -46,7 +46,15 @@ b. Multiple Assignment : Assigning multiple values:
 
 2. Getting User Input - To get input from user in python and then assign that value to a python variable, we need to user the 'INPUT' function
 To use the input function we also need to show a 'Prompt' to user to asking them to enter a value.
-name = input("Enter your name: ")  
+name = input("Enter your name: ")
 
-# Data Types
+# Python DataTypes
 A Data Type indicates to the interpreter what type of data is stored in a variable e.g. Number, Text, etc
+1. Integer - numerical type without fractional component
+2. Float - another numerical type with fractional component
+3. String - Character data type within quotes. To encode an apostrophe inside a string you can use either escape character('\'). e.g. 'I\'m happy.' or use double quotes e.g. "I'm happy." 
+4. Boolean - are two constant objects True and False used to represent truth values (in numeric contexts 1 is True, while 0 is False.)
+
+# Conditional Statements
+
+
