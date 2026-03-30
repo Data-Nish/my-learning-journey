@@ -10,7 +10,7 @@ Python was created by Guido Van Rossum born in 1956. Started programming project
 Python still occupies a high rank in the top ten of the PYPL PopularitY of Programming Language.
 
 # What is Python?
-Python is a tool, not a reptile. Python is a widely-used, interpreted, object-oriented, and high-level prohramming language with dynamic semantics (set of rules determing the program makes sense) used for general purpose programming.
+Python is a tool, not a reptile. Python is a widely-used, interpreted, object-oriented, and high-level programming language with dynamic semantics (set of rules determing the program makes sense) used for general purpose programming.
 
 # What makes Python Special? 
 Easy to learn
