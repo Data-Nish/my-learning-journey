@@ -219,4 +219,8 @@ if there is an else branch in the cascade, only one of all the branches is execu
 
 if there is no else branch, it's possible that none of the available branches is executed.
 
+# LOOPS
+
+Performing a certain part of the code more than once is called a loop.
+
 
