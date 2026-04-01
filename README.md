@@ -221,6 +221,22 @@ if there is no else branch, it's possible that none of the available branches is
 
 # LOOPS
 
-Performing a certain part of the code more than once is called a loop.
+Performing a certain part of the code more than once is called a loop. Looping is the process in which we have a some code that gets executed repeatedly until a particular condition is satisfied.
+There are two kinds of loops used in python - 
 
+01. For - The for statement is used to loop over a group or collection of data
+for num in range(0,10):
+print(num)
 
+2. While - The while statement simply loops until a condition is evaluates to False
+count = 0
+while count <10:
+   print(count)
+   count=+1
+
+# Data Structures
+List
+
+Tuple
+
+Dictionary
