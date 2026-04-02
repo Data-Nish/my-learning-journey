@@ -225,10 +225,13 @@ Performing a certain part of the code more than once is called a loop. Looping i
 There are two kinds of loops used in python - 
 
 01. For - The for statement is used to loop over a group or collection of data
+   -----
+
 for num in range(0,10):
 print(num)
 
-2. While - The while statement simply loops until a condition is evaluates to False
+02. While - The while statement simply loops until a condition is evaluates to False
+   ------
 count = 0
 while count <10:
    print(count)
@@ -236,6 +239,9 @@ while count <10:
 
 # Data Structures
 List
+----
+These indexes start from zero and are assigned in an increasing order i.e. from zero to n – 1 where n is number of items in that lists. These lists can store data of multiple data types, e.g. Integer, String, Float, etc. 
+Step 1: To creatw
 
 Tuple
 
