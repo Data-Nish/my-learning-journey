@@ -224,18 +224,158 @@ if there is no else branch, it's possible that none of the available branches is
 Performing a certain part of the code more than once is called a loop. Looping is the process in which we have a some code that gets executed repeatedly until a particular condition is satisfied.
 There are two kinds of loops used in python - 
 
-01. For - The for statement is used to loop over a group or collection of data
+01. For
+ - The for statement is used to loop over a group or collection of data. Sometimes it's more important 'to count the "turns" of the loop' than to check the conditions
    -----
+  the for loop is designed to do more complicated tasks - it can "browse" large collections of data item by item 
 
+syntax
+-----
+for i in range(100):
+    # do_something()
+    pass
+
+the for keyword opens the for loop; note - there's no condition after it; you don't have to think about conditions, as they're checked internally, without any intervention
+
+any variable after the for keyword is the 'control variable' of the loop (which is 'i' in the syntax above); it counts the loop's turns, and does it automatically
+
+the 'in' keyword introduces a syntax element describing the range of possible values being assigned to the control variable
+
+the 'range()' function (this is a very special function) is responsible for generating all the desired values of the control variable
+
+note the 'pass' keyword inside the loop body - it does nothing at all; it's an 'empty instruction' - we put it here because the for loop's syntax demands 'at least one instruction inside the body' (by the way - if, elif, else and while express the same thing)
+
+# Example 1
 for num in range(0,10):
-print(num)
+   print('The value of num is', num)
 
-02. While - The while statement simply loops until a condition is evaluates to False
+   ans
+   ---
+   0 to 9
+   
+   the loop has been executed ten times (it's the range() function's argument)
+   # The range() function may also accept three arguments -  'starting number' of the sequence , second argument tells the function 'where to stop' the sequence and  the third argument indicates the 'step' -  increment (the default value of the increment is 1)
+
+   # Example 2
+   for i in range(2, 8, 3):
+       print("The value of i is currently", i)
+
+ # output
+The value of i is currently 2
+The value of i is currently 5
+   
+   the last control variable's value is 9 (not 10, as it starts from 0, not from 1) in example 1
+
+02. While
+- The while statement simply loops until a condition is evaluates to False
    ------
+   syntax
+   ------
+   while conditional_expression:
+       instruction
+
+  If you notice some similarities to the 'if' instruction, the syntactic difference is only one: you use the word 'while' instead of the word if. The semantic difference is more important: when the condition is met, 'if' performs its statements _only once_; 'while' repeats the execution as long as the condition evaluates to True.
+------------------------------------------------------------------------------------
 count = 0
 while count <10:
    print(count)
    count=+1
+
+Note: all the rules regarding indentation are applicable here, too
+
+syntax 
+------
+while conditional_expression:
+    instruction_one
+    instruction_two
+    instruction_three
+    :
+    :
+    instruction_n
+    
+if you want to execute more than one statement inside one while, you must (as with if) indent all the instructions in the same way;
+
+an instruction or set of instructions executed inside the while loop is called the 'loop's body';
+
+if the condition is False (equal to zero) as early as when it is tested for the first time, the body is not executed even once
+
+the body 'should be able to change the condition's value', because if the condition is True at the beginning, the body might run continuously to infinity 
+
+An infinite loop
+----------------
+An infinite loop, also called an endless loop, is a sequence of instructions in a program which repeat indefinitely (loop endlessly.)
+
+while True:
+    print("I'm stuck inside a loop.")
+
+This loop will infinitely print "I'm stuck inside a loop." on the screen.
+
+ To terminate your program, just press Ctrl-C (or Ctrl-Break on some computers)
+ ---------------------------------------------
+
+
+Using a 'counter' variable to exit a loop
+----------------------------------------
+
+counter = 5
+while counter:
+    print("Inside the loop.", counter)
+    counter -= 1
+print("Outside the loop.", counter)
+
+or
+--
+
+counter = 5
+while counter != 0:
+    print("Inside the loop.", counter)
+    counter -= 1
+print("Outside the loop.", counter)
+
+Both generate the same output, anyone can be used. First one is preferred mostly
+output
+------
+Inside the loop. 5
+Inside the loop. 4
+Inside the loop. 3
+Inside the loop. 2
+Inside the loop. 1
+Outside the loop. 0
+
+
+# Example 2 While loop
+
+odd_numbers = 0
+even_numbers = 0
+
+# Read the first number.
+number = int(input("Enter a number or type 0 to stop: "))
+
+# 0 terminates execution.
+while number != 0:
+    # Check if the number is odd.  
+    if number % 2 == 1:  # if a number divided by 2 leaves a remainder of 1 (odd) or 0 (even)
+        # Increase the odd_numbers counter.
+        odd_numbers += 1
+    else:
+        # Increase the even_numbers counter.
+        even_numbers += 1
+    # Read the next number.
+    number = int(input("Enter a number or type 0 to stop: "))
+
+# Print results.
+print("Odd numbers count:", odd_numbers)
+print("Even numbers count:", even_numbers)
+
+ note that these two forms are equivalent:
+------------------------------------------
+while number != 0: and while number:
+
+or
+--
+
+if number % 2 == 1: and if number % 2:
+
 
 # Data Structures
 List
