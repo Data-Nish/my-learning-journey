@@ -29,7 +29,7 @@ Interesting fact - Python Software Foundation (PSF), a community that aims to de
 Variables are used to store and retrieve data from the memory. We can store value in a variable by either ASSIGNING a value to a variables or GETTING the value as INPUT from user.
 A variable should start with a letter or an underscore and cannot start with numbers.
 
-= is an Assignment Operator e.g. a=b assigns a with thw value of b
+= is an Assignment Operator e.g. a=b assigns a with the value of b
 
 1. Assigning Values - Two ways of assigning values to a variable:
    
@@ -94,6 +94,19 @@ Priority	   Operator
 
 6	         ==, !=
 
+
+Priority   	Operator	
+1	         ~, +, -	         unary
+2	         **	
+3	         *, /, //, %	
+4	         +, -	              binary
+5	         <<, >>	
+6	         <, <=, >, >=	
+7	         ==, !=	
+8	         &	
+9	         |	
+10	         =, +=, -=, *=, /=, %=, &=, ^=, |=, >>=, <<=
+
 Three types of Conditional Statements
 
 1. If
@@ -128,7 +141,7 @@ have_lunch()
 
 having lunch is not a conditional activity and doesn't depend on the weather
 
-CONDITIONALLY EXECUTED STATEMENTS HAVE TO BE INDENTED
+# CONDITIONALLY EXECUTED STATEMENTS HAVE TO BE INDENTED
 
 2. if-else statement
    Syntax
@@ -185,7 +198,7 @@ else:
 Here are two important points:
 this use of the if statement is known as nesting;remember that every else refers to the if which lies at the same indentation level; determine how the ifs and elses pair up;
 
-indentation improves readability, 
+indentation improves readability.
 
 3. elif Statement
    -------------- 
