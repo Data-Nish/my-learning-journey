@@ -81,33 +81,65 @@ a. yes, this is true
 b. no, this is false
 
 Python uses a set of very special operators
-Priority	   Operator	
-1         	+, -	         unary
 
-2	         **	
+# Priority   	Operator	
 
-3	         *, /, //, %	
+1	            ~, +, -	            unary
 
-4	         +, -	         binary
+2	            **	
 
-5	         <, <=, >, >=	
+3	            *, /, //, %	
 
-6	         ==, !=
+4	            +, -	               binary
 
+5	            <<, >>	  
 
-Priority   	Operator	
-1	         ~, +, -	         unary
-2	         **	
-3	         *, /, //, %	
-4	         +, -	              binary
-5	         <<, >>	
-6	         <, <=, >, >=	
-7	         ==, !=	
-8	         &	
-9	         |	
-10	         =, +=, -=, *=, /=, %=, &=, ^=, |=, >>=, <<=
+6	            <, <=, >, >=	
 
-Three types of Conditional Statements
+7	            ==, !=	
+
+8	            &	
+
+9	            |	   
+
+10	            =, +=, -=, *=, /=, %=, &=, ^=, |=, >>=, <<=
+
+Note
+----
+Think of Bitwise Shifting as moving digits left or right
+1. The Decimal Comparison (The "Power of 10" trick)
+In our normal math (Base 10):
+
+If you take 5 and shift it left (add a zero), it becomes 50. You just multiplied by 10.
+
+If you take 50 and shift it right (remove a digit), it becomes 5. You just divided by 10.
+
+2. The Binary Reality (The "Power of 2" trick)
+
+Computers use Base 2. So, instead of 10, everything happens in twos.
+
+Left Shift (<<): Moving bits to the left is like doubling the number.17 << 1 is $17 \times 2 = 34$17 << 2 is $17 \times 4 = 68$ (Doubled twice)
+
+Right Shift (>>): Moving bits to the right is like cutting the number in half.17 >> 1 is $17 // 2 = 8$ (The ".5" is chopped off) # right-shifting is the same as floor division (//); you lose the remainder.
+
+Digraphs: Just a fancy word for a symbol made of two characters (<< or >>). High Priority: In a long math equation, Python will perform the "shifts" before it performs basic addition or subtraction.
+--------
+
+#Example
+--------
+var = 17
+
+var_right = var >> 1  #17//2=8
+
+var_left = var << 2   #17*4=68
+
+print(var, var_left, var_right)
+
+output
+------
+17 68 8
+
+# Three types of Conditional Statements
 
 1. If
 
@@ -516,8 +548,206 @@ Outside the loop.
 List
 ----
 These indexes start from zero and are assigned in an increasing order i.e. from zero to n – 1 where n is number of items in that lists. These lists can store data of multiple data types, e.g. Integer, String, Float, etc. 
-Step 1: To creatw
 
-Tuple
+To create List
+-----------------------
+Use the list function or use empty brackets
+name=list()
+print(name)
+
+age=[]
+print(age)
+
+# Output
+[]
+[]
+
+Initialize
+------------------
+You can initialize a list with some data while creating the list, by passing values inside the list function or brackets
+
+age =[25, 33, 19]
+print (age)
+
+# output 
+[25, 33, 19]
+0   1   2 - this is index (the value inside the brackets which selects one element of the list is called an index)
+
+Append
+------
+You can add data to the end of list by calling the append method on the lists
+
+age.append(40)
+print (age)
+
+# Output
+[25, 33, 19, 40]
+
+Delete (pop or del)
+-------------------
+You can delete an element in a list by calling the pop method on it. Pop will delete the element at the end of the list
+
+age.pop()
+print(age)
+
+# Output
+[25, 33, 19]
+
+You can also delete an element at a particular index, by passing the index in as parameters in the function call
+
+age.pop(0)
+print(age)
+
+# output
+[33, 19]
+# Another Example using 'del'
+
+numbers = [10, 5, 7, 2, 1]
+print("Original list content:", numbers)  # Printing original list content.
+
+numbers[0] = 111
+print("\nPrevious list content:", numbers)  # Printing previous list content.
+
+numbers[1] = numbers[4]  # Copying value of the fifth element to the second.
+print("Previous list content:", numbers)  # Printing previous list content.
+
+print("\nList's length:", len(numbers))  # Printing previous list length.
+
+###
+
+del numbers[1]  # Removing the second element from the list.
+print("New list's length:", len(numbers))  # Printing new list length.
+print("\nNew list content:", numbers)  # Printing current list content.
+
+# Output
+
+Original list content: [10, 5, 7, 2, 1]
+
+Previous list content: [111, 5, 7, 2, 1]
+Previous list content: [111, 1, 7, 2, 1]
+
+List's length: 5
+New list's length: 4
+
+New list content: [111, 7, 2, 1]
+
+
+Before we start talking about tuples and dictionaries, we have to introduce two important concepts: 
+# sequence types and mutability
+
+A sequence type is a type of data in Python which is able to store more than one value (or less than one, as a sequence may be empty), and these values can be sequentially (hence the name) browsed, element by element.
+As the 'for' loop is a tool especially designed to iterate through sequences, we can express  a sequence is data which can be scanned by the for loop.
+
+The second notion - mutability - is a property of any of Python's data that describes its readiness to be freely changed during program execution. There are two kinds of Python data: mutable and immutable.
+
+# Mutable data can be freely updated at any time
+Immutable data cannot be modified
+
+# Tuples - A tuple is an immutable sequence type. Tuples prefer to use parenthesis
+Tuples are also used to store collection of in a sequential order, the difference is that it is immutable. Immutable means that once you create a tuple, you cant make changes to it, i.e. add items, remove items, swap items.
+
+Like lists, elements in tuples are also accessed using their indexes. Tuples can also store data of multiple types such as Integer, float, boolean, etc. 
+
+Create
+-------
+To create  a tuple with some values you can either use the tuple function or use the comma syntax
+
+# example of empty tuples
+Options = ()
+names = tuple()
+print(Options)
+print(names)
+
+# Output
+()
+()
+
+# example of one-element tuple
+one_element_typle_1 = (1, )
+print(one_element_typle_1)
+one_element_typle_2 = (1., )
+print(one_element_typle_2)
+
+# Output
+(1,)
+(1.0,)
+
+Initialize
+----------
+To use the comma syntax you need to have a few values separated by commas and assign them to a variable
+
+# Example
+age =25,18,21
+print(age)
+
+# Output
+(25, 18, 21)
+
+0     1   2  # indexes of above tuple elements
+
+Search
+------
+To check if a particular element exists in the tuple we use the membership operator (using the ‘in’ keyword), which returns True if element exists and False if it does not
+
+# Example
+21 in age
+
+# Output
+True
+
+You can also use the index method to find the 'index of a particular element' in a tuple. It returns the index if the element is found if not then throws an error.
+
+# Example
+age.index(21)
+
+# Output
+2
+
+# Example
+my_tuple = (1, 10, 100)
+
+t1 = my_tuple + (1000, 10000)
+t2 = my_tuple * 3  #3 times my_tuple
+
+print(len(t2))
+print(t1)
+print(t2)
+print(10 in my_tuple)
+print(-10 not in my_tuple)
+
+# Output
+9
+(1, 10, 100, 1000, 10000)
+(1, 10, 100, 1, 10, 100, 1, 10, 100)
+True
+True
+
+# interesting fact about tuple
+One of the most useful tuple properties is their ability to appear on the left side of the assignment operator. It is an elegant tool to swap two variables' values. A tuple's elements can be variables
+
+Let's see an example
+--------------------
+var = 123
+
+t1 = (1, )
+t2 = (2, )
+t3 = (3, var)
+
+t1, t2, t3 = t2, t3, t1
+
+print(t1, t2, t3)
+
+output
+------
+(2,) (3, 123) (1,)
+
+It shows three tuples interacting - in effect, the values stored in them "circulate" - t1 becomes t2, t2 becomes t3, and t3 becomes t1
+
+
+
+Slice
+-----
+
+
 
 Dictionary
