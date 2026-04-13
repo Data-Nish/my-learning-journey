@@ -78,12 +78,13 @@ It is the 'decision-making' center of code. These statement allows the program t
 Fortunately, computers know only two kinds of answers: 
 
 a. yes, this is true
+
 b. no, this is false
 
 Python uses a set of very special operators
 
-# Priority   	Operator	
-
+ Priority   	Operator	
+------------------------------------------
 1	            ~, +, -	            unary
 
 2	            **	
@@ -550,7 +551,7 @@ List
 These indexes start from zero and are assigned in an increasing order i.e. from zero to n – 1 where n is number of items in that lists. These lists can store data of multiple data types, e.g. Integer, String, Float, etc. 
 
 To create List
------------------------
+---------------
 Use the list function or use empty brackets
 name=list()
 print(name)
@@ -737,17 +738,77 @@ t1, t2, t3 = t2, t3, t1
 
 print(t1, t2, t3)
 
-output
-------
+# output
+
 (2,) (3, 123) (1,)
 
 It shows three tuples interacting - in effect, the values stored in them "circulate" - t1 becomes t2, t2 becomes t3, and t3 becomes t1
 
-
-
 Slice
 -----
+Slicing is a powerful way to extract a specific portion (a "slice") of a sequence, such as a string, list, or tuple.
+To slice a list we need to provide the index from where you wish to start the slice and index before which the slice ends like age[1:4]
 
+# Example
+age =25,18,21, 33, 35
+print(age[1:4])
 
+# output
+(18, 21, 33)
+********************************************************************************************************
 
-Dictionary
+Dictionary - a dictionary is a set of key-value pairs. The list of pairs is surrounded by 'curly braces', while the pairs themselves are separated by 'commas', and the keys and values by 'colons'.
+----------
+It's not a sequence type (but can be easily adapted to sequence processing) and it is mutable. The Python dictionary works in the same way as a bilingual dictionary.
+
+Note:
+-----
+Each key must be unique - it's not possible to have more than one key of the same value;
+
+a key may be any immutable type of object: it can be a number (integer or float), or even a string, but not a list;
+
+a dictionary is not a list - a list contains a set of numbered values, while a dictionary holds pairs of values;
+
+the len() function works for dictionaries, too - it returns the numbers of key-value elements in the dictionary;
+
+a dictionary is a one-way tool - if you have an English-French dictionary, you can look for French equivalents of English terms, but not vice versa.
+
+# Example
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+phone_numbers = {'boss': 5551234567, 'Suzy': 22657854310}
+empty_dictionary = {}
+
+print(dictionary)
+print(phone_numbers)
+print(empty_dictionary)
+
+# Output
+{'cat': 'chat', 'dog': 'chien', 'horse': 'cheval'}
+{'boss': 5551234567, 'Suzy': 22657854310}
+{}
+
+Create
+------
+To create an empty dictionary you can either use the dict function or use the curly braces syntax
+
+# Example
+names = {}
+age = dict()
+print(age)
+print(names)
+
+# Output
+{}
+{}
+
+Initialize
+----------
+To initialize a dictionary with some values you can either pass some nested data structures to dict function or use the curly braces syntax
+
+# Example
+age_list = [['a',1], ['b',2], ['c',3]]
+age = dict(age_list)
+print(age)
+
+# Output
+{'a': 1, 'b': 2, 'c': 3}
