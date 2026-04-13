@@ -807,8 +807,52 @@ To initialize a dictionary with some values you can either pass some nested data
 
 # Example
 age_list = [['a',1], ['b',2], ['c',3]]
+
 age = dict(age_list)
+
 print(age)
 
 # Output
 {'a': 1, 'b': 2, 'c': 3}
+
+Add
+---
+To add a new key value pair by using this syntax:
+
+dict_name[key] = value
+
+# Example
+age['d'] = 5
+
+print(age)
+
+# Output
+{'a': 1, 'b': 2, 'c': 3, 'd': 5}
+
+Remove
+------
+To remove an element just use the 'del' keyword with the key dictionary name e.g. del age[‘d’]
+
+# Example
+del age['d']
+
+print(age)
+
+# Output
+{'a': 1, 'b': 2, 'c': 3}
+
+Search
+------
+To search a value you need to use the membership operator with the key, If the key is found it returns true else it returns false
+
+# Example
+'a' in age
+
+# Output
+True
+
+NOTE:
+-----
+
+(*) In Python 3.6x dictionaries have become ordered collections by default. Your results may vary depending on what Python version you're using.
+
