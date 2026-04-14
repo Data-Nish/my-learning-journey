@@ -856,3 +856,61 @@ NOTE:
 
 (*) In Python 3.6x dictionaries have become ordered collections by default. Your results may vary depending on what Python version you're using.
 
+***************************************************************************************************
+
+# Creating a Function - A function is a block of code that performs a specific task when the function is called (invoked). You can use functions to make your code reusable, better organized, and more readable. Functions can have parameters and return values.
+
+This is what the simplest function definition looks like:
+
+syntax
+------
+def function_name():
+
+    function_body
+
+
+It always starts with the keyword 'def' (for define)
+
+next after def goes the 'name of the function' (the rules for naming functions are exactly the same as for naming variables)
+
+after the function name, there's a place for a 'pair of parentheses (they contain nothing here, but that will change soon)
+
+the line has to be ended with a 'colon'
+
+the line directly after def begins the 'function body' ‒ a couple (at least one) of necessarily 'nested instructions', which will be executed every time the function is invoked; note: the 'function ends where the nesting ends', so you have to be careful.
+
+Another Syntax
+--------------
+def add_two_numbers(x,y):
+
+   print ("adding two number")
+
+   return x+ y
+
+   add_two_numbers = 'Name' of the Function
+   (x,y) = 'Parameters' or Function Arguments
+   x+y = 'return' statement
+
+Meanings
+--------
+The name of the function is like a naming a variable and follows the same rules
+
+Parameters or Function Arguments are the variables or data that we want our function to work on,e.g., numbers to be added
+Note:
+-----
+You can have any number of parameters be accepted in your function or no parameters if your function does not need it
+
+Return - You can have no return value at the end by simply omitting the return statement in case you so not wish your function to return a value
+
+# Types of Functions 
+
+There are at least 'four' basic types of functions in Python:
+
+'built-in functions' which are an integral part of Python (such as the print() function). You can see a complete list of Python built-in functions at https://docs.python.org/3/library/functions.html 
+
+the ones that come from 'pre-installed modules' 
+
+'user-defined functions' which are written by users for users - you can write your own functions and use them freely in your code
+
+the 'lambda functions'
+
