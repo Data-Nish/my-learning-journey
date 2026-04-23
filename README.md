@@ -914,3 +914,29 @@ the ones that come from 'pre-installed modules'
 
 the 'lambda functions'
 
+
+# Object Oriented Programming
+Python is a universal tool for both object and procedural programming. 
+Every class is like a recipe which can be used when you want to create a useful object (this is where the name of the approach comes from). You may produce as many objects as you need to solve your problem.
+
+Every object has a 'set of traits' (they are called # properties or # attributes - we'll use both words synonymously) and is able to perform a 'set of activities' (which are called methods).
+
+Let's look for a moment at vehicles. All existing vehicles (and those that don't exist yet) are related by a single, important feature: the ability to move.  Let's take the following circumstances into consideration: vehicles are artificially created entities used for transportation, moved by forces of nature, and directed (driven) by humans.
+
+The vehicles class is very broad. Too broad. We have to define some more specialized classes, then. The specialized classes are the subclasses. The vehicles class will be a superclass for them all.
+
+# Note: the hierarchy grows from top to bottom, like tree roots, not branches. The most general, and the widest, class is always at the top (the superclass) while its descendants are located below (the subclasses).
+
+ We've chosen subclasses based on the environment, and say that there are (at least) four subclasses:
+
+land vehicles;
+water vehicles;
+air vehicles;
+space vehicles.
+
+we'll discuss the first subclass only - land vehicles.
+Land vehicles may be further divided, depending on the method with which they impact the ground. So, we can enumerate:
+
+wheeled vehicles;
+tracked vehicles;
+hovercrafts.
