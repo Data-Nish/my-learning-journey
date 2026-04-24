@@ -925,7 +925,9 @@ Let's look for a moment at vehicles. All existing vehicles (and those that don't
 
 The vehicles class is very broad. Too broad. We have to define some more specialized classes, then. The specialized classes are the subclasses. The vehicles class will be a superclass for them all.
 
-# Note: the hierarchy grows from top to bottom, like tree roots, not branches. The most general, and the widest, class is always at the top (the superclass) while its descendants are located below (the subclasses).
+# Note: the hierarchy grows from top to bottom, like tree roots, not branches. 
+
+-- The most general, and the widest, class is always at the top ('the superclass') while its descendants are located below ('the subclasses').
 
  We've chosen subclasses based on the environment, and say that there are (at least) four subclasses:
 
@@ -940,3 +942,72 @@ Land vehicles may be further divided, depending on the method with which they im
 wheeled vehicles;
 tracked vehicles;
 hovercrafts.
+
+# The top-level class is an exception - it doesn't have its own superclass.
+
+class
+-----
+A class (among other definitions) is a set of objects. An object is a being belonging to a class.
+
+An object is an incarnation of the requirements, traits, and qualities assigned to a specific class. This may sound simple, but note the following important circumstances. 'Classes form a hierarchy'.
+
+Each 'subclass is more specialized' (or more specific) than its superclass. Conversely, each 'superclass is more general' (more abstract) than any of its subclasses.
+
+
+# Inheritance
+It is one of the fundamental concepts of object programming. Any object bound to a specific level of a class hierarchy inherits all the traits (as well as the requirements and qualities) defined inside any of the superclasses.
+
+The object programming convention assumes that every existing object may be equipped with three groups of attributes:
+ # Name
+ an object has a name that uniquely identifies it within its home namespace (although there may be some anonymous objects, too)
+
+# Properties
+ an object has a set of individual properties which make it original, unique, or outstanding
+
+ # Activities
+ an object has a set of abilities to perform specific activities, able to change the object itself, or some of the other objects.
+
+ Whenever you describe an object and you use:
+
+a noun – you probably define the object's name;
+an adjective – you probably define the object's property;
+a verb – you probably define the object's activity.
+
+# Let's take an example
+
+Rudolph is a large cat who sleeps all day.
+
+Object name = Rudolph
+Home class = Cat
+Property = Size (large)
+Activity = Sleep (all day)
+
+# Your first class
+Object programming is the art of defining and expanding classes. A class is a model of a very specific part of reality, reflecting properties and activities found in the real world 
+There's no obstacle to defining new, more precise subclasses. They'll inherit everything from their superclass, so the work that went into its creation isn't wasted.
+The class you define has nothing to do with the object: 
+# the existence of a class does not mean that any of the compatible objects will automatically be created. 
+The class itself isn't able to create an object - you have to create it yourself, and Python allows you to do this.
+
+ The simplest class and to create an object. Take a look at the example below:
+
+class TheSimplestClass:
+    pass
+
+The definition begins with the keyword class. 
+
+ followed by an identifier which will name the class
+
+ Next, you add a colon (:), as classes, 
+
+ The pass keyword fills the class with nothing. It doesn't contain any methods or properties.
+
+# Your first object
+
+The newly defined class becomes a tool that is able to create new objects.
+
+my_first_object = TheSimplestClass()
+
+# The act of creating an object of the selected class is also called an instantiation 
+(as the object becomes an instance of the class).
+
