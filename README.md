@@ -1011,3 +1011,51 @@ my_first_object = TheSimplestClass()
 # The act of creating an object of the selected class is also called an instantiation 
 (as the object becomes an instance of the class).
 
+What is a Stack?
+----------------
+A stack is a structure developed to 'store data' in a very specific way. 
+
+Imagine a stack of coins. You aren't able to put a coin anywhere else but on the top of the stack. If you want to get the coin that lies on the bottom, you have to remove all the coins from the higher levels. The alternative name of stack is 'LIFO'  - Last In First Out - the coin that came last onto the stack will leave first.
+
+# A stack is an object with 2 elementary operations - 'PUSH' ( when a new element is put on the top) and 'POP' (when an existing element is taken away from the top)
+
+Stacks are used very often in many classical algorithms.
+
+# Interview Tip on answering Class, Object and Constructor
+
+'Class' in Python is a blueprint or template used to create objects. It defines the properties (data/attributes) and behaviors (methods) that the objects created from it will have. For example, if I create a Stack class, it can define that every stack should have storage and methods like push and pop.
+
+class Stack:
+    pass
+
+'Object' is an instance of a class. It is the actual entity created from the blueprint. Once we create an object, it can hold its own data and use the methods defined in the class.
+
+  s1 = Stack()   
+  Here, s1 is an object of the Stack class.
+
+A key point is that 'multiple' objects can be created from the same class, and each object maintains its own separate state.
+
+s1 = Stack()
+
+s2 = Stack()
+Both are separate objects.
+
+'Constructor' in Python is a special method called __init__() that is automatically executed when an object is created. Its purpose is to initialize the object’s attributes.
+
+class Stack:
+    def __init__(self):
+        self.stack_list = []
+
+__init__() is the constructor
+it runs automatically when we do:
+
+s = Stack()
+
+and 'initializes stack_list' as an empty list for that object.
+
+# note: the obligatory parameter is usually named 'self' - it's only a convention, but you should follow it - it simplifies the process of reading and understanding your code.
+
+Encapsulation
+-------------
+the ability to hide (protect) selected values against unauthorized access is called encapsulation; 
+# the encapsulated values can be neither accessed nor modified if you want to use them exclusively;
