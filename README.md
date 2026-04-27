@@ -1055,6 +1055,10 @@ and 'initializes stack_list' as an empty list for that object.
 
 # note: the obligatory parameter is usually named 'self' - it's only a convention, but you should follow it - it simplifies the process of reading and understanding your code.
 
+# for accessing an object's properties, you need to name the object, put a dot (.) after it, 
+
+
+
 Encapsulation
 -------------
 the ability to hide (protect) selected values against unauthorized access is called encapsulation; 
