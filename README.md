@@ -1057,7 +1057,48 @@ and 'initializes stack_list' as an empty list for that object.
 
 # for accessing an object's properties, you need to name the object, put a dot (.) after it, 
 
+ A class method is actually a function declared inside the class and able to access all the class's components.
 
+ The part of the Python class responsible for creating new objects is called the constructor, and it's implemented as a method of the name __init__
+
+ Each class method declaration must contain at least one parameter (always the first one) usually referred to as 'self', and is used by the objects to identify themselves
+
+ If we want to hide any of a class's components from the outside world, we should start its name with __. Such components are called private.
+
+ Quick Exercise to understand above concepts
+ --------------------------------------------
+
+ Exercise 1
+ ------------
+
+Assuming that there is a class named Snakes, write the very first line of the Python class declaration, expressing the fact that the new class is actually a subclass of Snake.
+
+class Python(Snakes):
+
+Exercise 2
+------------
+
+Something is missing from the following declaration – what?
+
+class Snakes:
+    def __init__():
+        self.sound = 'Sssssss'
+
+* The __init__() constructor lacks the obligatory parameter (we should name it 'self' to stay compliant with the standards).
+
+Exercise 3
+-----------
+Modify the code to guarantee that the venomous property is private.
+
+class Snakes:
+    def __init__(self):
+        self.venomous = True
+  
+The code should look as follows:
+
+class Snakes:
+    def __init__(self):
+        self.__venomous = True
 
 Encapsulation
 -------------
